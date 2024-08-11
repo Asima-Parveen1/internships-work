@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>galary img</title>
+    <link rel="stylesheet" href="/internship/css-folder/images.css">
+  </head>
+  <body>
+
+
+                <!-- internship task 6 -->
+
+
+        <div class="container">
+
+            <h1>images gallary</h1>
+           <div class="image-container">
+               <div class="image"><img src="/internship/img/4.pic.png" alt=""></div>
+               <div class="image"><img src="/internship/img/5.pic.png" alt=""></div>
+               <div class="image"><img src="/internship/img/6.pic.png" alt=""></div>
+               <div class="image"><img src="/internship/img/7.pic.png" alt=""></div>
+               <div class="image"><img src="/internship/img/4.pic.png" alt=""></div>
+               <div class="image"><img src="/internship/img/5.pic.png" alt=""></div>
+        </div>
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="/internship/img/4.pic.png" alt="">
+        </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.image-container img').forEach(image => {  image.onclick = () =>{
+
+          document.querySelector('.popup-image').style.display = 'block';
+          document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+        });
+
+        document.querySelector('.popup-image span').onclick = () =>{
+          document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+  </body>
+</html>
